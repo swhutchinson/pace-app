@@ -44,7 +44,7 @@ DATA = HERE / "data"
 # Ollama's address (only reachable from this laptop).
 OLLAMA = "http://127.0.0.1:11434"
 # The web pages allowed to call this server.
-ORIGINS = {"https://hutchybakes-glitch.github.io", "http://localhost:8765", "http://127.0.0.1:8765"}
+ORIGINS = {"https://swhutchinson.github.io", "http://localhost:8765", "http://127.0.0.1:8765"}
 # Largest request accepted (a voice clip of about 15 seconds).
 MAX_BODY = 600_000
 # Letters for the pairing code (no 0/O or 1/I/L to mix up).

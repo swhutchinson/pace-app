@@ -213,7 +213,7 @@ def go_live(url):
         # Ask the proxy's health through the tunnel, as the phone would.
         try:
             # With the pairing code.
-            h = get_json(url + "/health", 10, {"Authorization": "Bearer " + proxy.CFG["code"], "Origin": "https://hutchybakes-glitch.github.io"})
+            h = get_json(url + "/health", 10, {"Authorization": "Bearer " + proxy.CFG["code"], "Origin": "https://swhutchinson.github.io"})
             # It works: say so.
             say(f"Phone link OK · model {'loaded' if h.get('loaded') else 'loading'} · voice {h.get('voice')}")
             # Remember it's live.

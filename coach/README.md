@@ -1,6 +1,6 @@
 # Pacer laptop coach
 
-Pacer v4 (https://hutchybakes-glitch.github.io/pace-app/v4/) gets an AI coach that runs on **your own laptop**: qwen2.5:3b in Ollama, reached from your iPhone over mobile data. Everything is free and open source, and nothing needs an account or a card.
+Pacer v4 (https://swhutchinson.github.io/pace-app/v4/) gets an AI coach that runs on **your own laptop**: qwen2.5:3b in Ollama, reached from your iPhone over mobile data. Everything is free and open source, and nothing needs an account or a card.
 
 **Who does what:**
 - **The model (qwen2.5:3b)** understands what you say ("I'm really struggling") and suggests plan changes as strict JSON. It never produces a number that matters.
@@ -42,7 +42,7 @@ Pacer v4 (https://hutchybakes-glitch.github.io/pace-app/v4/) gets an AI coach th
 ## Try the coach without running (sim mode)
 
 1. Start `start.bat` on the laptop.
-2. Open https://hutchybakes-glitch.github.io/pace-app/v4/?sim=1. If you haven't entered the pairing code in this browser yet, enter it in ⚙︎ Settings → Laptop coach (AI). A Safari tab and the home-screen app keep separate settings.
+2. Open https://swhutchinson.github.io/pace-app/v4/?sim=1. If you haven't entered the pairing code in this browser yet, enter it in ⚙︎ Settings → Laptop coach (AI). A Safari tab and the home-screen app keep separate settings.
 3. On Today, tap **Load the demo plan** on the 🧠 Coach demo card. It sets up a pretend 10K plan that is four weeks in, with the sessions so far marked as run.
 4. Fill in how your latest run felt, for example 6/10, legs Heavy, energy Low, note "legs very tired", and tap Save. The AI answers in about 30–45 s with its suggested changes.
 5. Tap **Accept**, then **See the plan** to see the new revision. Undo is on the Plan tab.
@@ -70,7 +70,7 @@ I chose it over Tailscale Funnel, which needs an account sign-up, and over a fix
 **Security.**
 - **The proxy is the only thing reachable from outside.** Every request must carry the pairing code: about 79 bits of randomness, compared in constant time. Twenty wrong codes in ten minutes lock it out for ten minutes.
 - **Only these endpoints exist:** `/health`, `/warm`, `/intent`, `/voice`, `/plan` (a job that's polled through `/job`) and `/log`. The phone can't send arbitrary prompts, pick a model, or reach any other Ollama function.
-- **Only Pacer's web address can call it from a browser.** The CORS allowlist is `hutchybakes-glitch.github.io`, plus `localhost:8765` for testing.
+- **Only Pacer's web address can call it from a browser.** The CORS allowlist is `swhutchinson.github.io`, plus `localhost:8765` for testing.
 - **Requests are capped at 600 kB,** and voice clips are never stored.
 
 ## Voice on the iPhone (what works, and why)
